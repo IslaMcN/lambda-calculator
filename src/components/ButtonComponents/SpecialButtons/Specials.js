@@ -2,9 +2,9 @@ import React from "react";
 import {useState} from "react";
 
 //import any components needed
-import {SpecialButton} from './SpecialButton.js';
+import {SpecialButton} from '../SpecialButtons/SpecialButton.js';
 //Import your array data to from the provided data file
-import {specials} from '../../data.js';
+import {specials} from '../../../data.js';
 const Specials = (props) => {
   // STEP 2 - add the imported data to state
 const [specialsState, setSpecialsState] = useState(specials);
@@ -14,7 +14,7 @@ const [specialsState, setSpecialsState] = useState(specials);
        component matching the name on the provided file. Pass
        it any props needed by the child component*/
        
-       specials.map((arr) => {
+       specials.map((arr) => { 
          return <SpecialButton key = {arr}
          text={arr}
          addSpecial={props.addSpecial} />
@@ -23,7 +23,7 @@ const [specialsState, setSpecialsState] = useState(specials);
   );
 };
 
-
+export default Specials;
 
  // let newComponents = data.map( (arrayItem) => {
     //     let newButton = buttonCreator(arrayItem);

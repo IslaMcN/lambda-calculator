@@ -2,12 +2,13 @@ import React  from "react";
 import {useState} from "react";
 
 //import any components needed
-import {OperatorButton} from './OperatorButton.js';
+import {OperatorButton} from '../OperatorButtons/OperatorButton.js';
 //Import your array data to from the provided data file
-import {operators} from '../../data.js';
+import {operators} from '../../../data.js';
 const Operators = (props) => {
   // STEP 2 - add the imported data to state
   const [operatorsState, setOperatorsState] = useState(operators);
+  console.log(props);
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
@@ -21,3 +22,4 @@ const Operators = (props) => {
     </div>
   );
 };
+export default Operators;
